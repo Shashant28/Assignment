@@ -2,13 +2,14 @@
 //  SuggestionTableViewCell.swift
 //  SearchImageAssignment
 //
-//  Created by shashant on 09/05/22.
+//  Created by shashant on 08/05/22.
 //
 
 import UIKit
 
 class SuggestionTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var suggestionLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

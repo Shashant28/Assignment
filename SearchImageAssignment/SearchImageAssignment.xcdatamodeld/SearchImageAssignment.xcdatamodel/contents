@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PhotoModelDB" representedClassName=".PhotoModelDB" isAbstract="YES" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String"/>
+        <attribute name="imgData" optional="YES" attributeType="Binary"/>
+        <attribute name="searcChar" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="SearchCharacter" representedClassName=".SearchCharacter" isAbstract="YES" syncable="YES">
+        <attribute name="str" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="PhotoModelDB" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="SearchCharacter" positionX="-54" positionY="18" width="128" height="44"/>
+    </elements>
 </model>

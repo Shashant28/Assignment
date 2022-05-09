@@ -52,10 +52,10 @@ class HamburgerButton : UIButton {
 
         for layer in [ self.top, self.middle, self.bottom ] {
             layer?.fillColor = nil
-            layer?.strokeColor = UIColor.white.cgColor
+            layer?.strokeColor = UIColor.gray.cgColor
             layer?.lineWidth = 4
             layer?.miterLimit = 4
-            layer?.lineCap = kCALineCapRound
+            layer?.lineCap = CAShapeLayerLineCap.round
             layer?.masksToBounds = true
 
             let strokingPath = CGPath(__byStroking: (layer?.path!)!, transform: nil, lineWidth: 4, lineCap: .round, lineJoin: .miter, miterLimit: 4)
@@ -100,7 +100,7 @@ class HamburgerButton : UIButton {
                 strokeStart.duration = 0.5
                 strokeStart.timingFunction = CAMediaTimingFunction(controlPoints: 0.25, 0, 0.5, 1.2)
                 strokeStart.beginTime = CACurrentMediaTime() + 0.1
-                strokeStart.fillMode = kCAFillModeBackwards
+                strokeStart.fillMode = CAMediaTimingFillMode.backwards
 
                 strokeEnd.toValue = hamburgerStrokeEnd
                 strokeEnd.duration = 0.6
@@ -113,7 +113,7 @@ class HamburgerButton : UIButton {
             let topTransform = CABasicAnimation(keyPath: "transform")
             topTransform.timingFunction = CAMediaTimingFunction(controlPoints: 0.5, -0.8, 0.5, 1.85)
             topTransform.duration = 0.4
-            topTransform.fillMode = kCAFillModeBackwards
+            topTransform.fillMode = CAMediaTimingFillMode.backwards
 
             let bottomTransform = topTransform.copy() as! CABasicAnimation
 

@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import CoreData
+
+public class SearchCharacter:NSManagedObject {
+    @NSManaged var str: String?
+}
